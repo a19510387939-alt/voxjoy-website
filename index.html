@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VoxJoy - 游戏语音音效工具</title>
+  <meta name="description" content="VoxJoy 是为游戏玩家和主播打造的语音音效工具，把击杀、胜利、失败、整活语音做成歌单，用快捷键一键触发。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar" aria-label="主导航">
+      <a class="brand" href="#top" aria-label="VoxJoy 首页">
+        <span class="brand-mark">VJ</span>
+        <span class="brand-copy">
+          <strong>VoxJoy</strong>
+          <small>Game Voice Soundboard</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="#fps-demo">FPS 玩家专区</a>
+        <a href="#features">功能</a>
+        <a href="#compare">Free / Pro</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="nav-download" href="../dist/VoxJoy_Free_Setup.exe">免费下载 Windows 版</a>
+    </header>
+
+    <main id="top">
+      <section class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">为游戏玩家和主播打造</p>
+            <h1 id="hero-title">让你的游戏高光时刻，自带专属音效。</h1>
+            <p class="hero-lede">VoxJoy 是为游戏玩家和主播打造的语音音效工具，可以把击杀、胜利、失败、整活语音做成歌单，用快捷键一键触发。</p>
+            <div class="hero-actions">
+              <a class="primary-cta" href="../dist/VoxJoy_Free_Setup.exe">免费下载 Windows 版</a>
+              <a class="secondary-cta" href="#compare">查看高级版</a>
+            </div>
+            <p class="support-note">支持 Windows 10 / 11，免费版可直接体验，Pro 登录后自动解锁。</p>
+          </div>
+
+          <div class="hero-console" aria-label="VoxJoy 抽象产品界面">
+            <div class="console-top">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="console-display">
+              <div class="hud-frame">
+                <span class="corner corner-a"></span>
+                <span class="corner corner-b"></span>
+                <span class="corner corner-c"></span>
+                <span class="corner corner-d"></span>
+                <div class="crosshair" aria-hidden="true"></div>
+                <div class="pulse-label">HOTKEY READY</div>
+              </div>
+              <div class="mini-playlists">
+                <div class="mini-card active">
+                  <span>击杀语音</span>
+                  <strong>F1</strong>
+                </div>
+                <div class="mini-card">
+                  <span>胜利语音</span>
+                  <strong>F2</strong>
+                </div>
+                <div class="mini-card">
+                  <span>直播整活</span>
+                  <strong>F5</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="fps-demo" class="fps-section" aria-labelledby="fps-title">
+        <div class="section-heading">
+          <p class="eyebrow">FPS 玩家专区</p>
+          <h2 id="fps-title">适合 Valorant / CS2 等 FPS 玩家的战术射击玩家场景</h2>
+          <p>下面是一个模拟演示：按下快捷键，VoxJoy 选中歌单、随机抽取音效、播放波形，并显示当前回合场景标签。</p>
+        </div>
+
+        <div class="demo-panel" data-active-scene="kill">
+          <div class="demo-left">
+            <div class="demo-flow" aria-label="VoxJoy 触发流程">
+              <span>按下快捷键</span>
+              <span>选中歌单</span>
+              <span>随机抽取音效</span>
+              <span>波形播放</span>
+              <span>显示场景标签</span>
+            </div>
+
+            <div class="keypad" role="group" aria-label="FPS 模拟快捷键">
+              <button class="keycap active" type="button" data-scene="kill" aria-pressed="true">
+                <strong>F1</strong>
+                <span>击杀语音</span>
+              </button>
+              <button class="keycap" type="button" data-scene="win" aria-pressed="false">
+                <strong>F2</strong>
+                <span>胜利语音</span>
+              </button>
+              <button class="keycap" type="button" data-scene="retry" aria-pressed="false">
+                <strong>F3</strong>
+                <span>失败嘴硬</span>
+              </button>
+              <button class="keycap" type="button" data-scene="team" aria-pressed="false">
+                <strong>F4</strong>
+                <span>队友互动</span>
+              </button>
+              <button class="keycap" type="button" data-scene="stream" aria-pressed="false">
+                <strong>F5</strong>
+                <span>直播整活</span>
+              </button>
+            </div>
+
+            <div class="demo-actions">
+              <a class="primary-cta" href="../dist/VoxJoy_Free_Setup.exe">免费下载 Windows 版</a>
+              <a class="secondary-cta" href="#compare">查看高级版</a>
+            </div>
+          </div>
+
+          <div class="demo-right">
+            <div class="scene-tag" aria-live="polite">
+              <span>SCENE</span>
+              <strong id="sceneLabel">ACE MOMENT</strong>
+            </div>
+
+            <div class="playlist-stack" aria-label="模拟歌单">
+              <article class="playlist-card active" data-playlist="kill">
+                <span class="playlist-index">01</span>
+                <div>
+                  <h3>击杀语音歌单</h3>
+                  <p>干净、短促、适合高光时刻。</p>
+                </div>
+              </article>
+              <article class="playlist-card" data-playlist="win">
+                <span class="playlist-index">02</span>
+                <div>
+                  <h3>胜利语音歌单</h3>
+                  <p>回合结束，给队友一点仪式感。</p>
+                </div>
+              </article>
+              <article class="playlist-card" data-playlist="retry">
+                <span class="playlist-index">03</span>
+                <div>
+                  <h3>失败嘴硬歌单</h3>
+                  <p>下一把继续，气势不能掉。</p>
+                </div>
+              </article>
+              <article class="playlist-card" data-playlist="team">
+                <span class="playlist-index">04</span>
+                <div>
+                  <h3>队友互动歌单</h3>
+                  <p>沟通、鼓励、轻松一点。</p>
+                </div>
+              </article>
+              <article class="playlist-card" data-playlist="stream">
+                <span class="playlist-index">05</span>
+                <div>
+                  <h3>直播整活歌单</h3>
+                  <p>观众能听懂，节目效果刚好。</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="sound-strip" aria-live="polite">
+              <span>RANDOM PICK</span>
+              <strong id="soundName">Ace clean hit 03</strong>
+            </div>
+
+            <div class="waveform" aria-label="模拟音频波形">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="features-section" aria-labelledby="features-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">核心功能</p>
+          <h2 id="features-title">把你的语音包，变成顺手的游戏工具。</h2>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <span>01</span>
+            <h3>快捷键播放</h3>
+            <p>给常用音效绑定 F 键、组合键或鼠标动作，战斗中不用切窗口。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>虚拟声卡输出</h3>
+            <p>把音效送进语音软件，让队友或观众听到同一套节目效果。</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>分类歌单</h3>
+            <p>击杀、胜利、失败、整活分开放，临场选择更快。</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>随机播放</h3>
+            <p>同一个场景自动抽取不同语音，避免每次都像复读。</p>
+          </article>
+          <article>
+            <span>05</span>
+            <h3>直播整活</h3>
+            <p>为直播间准备反应音效、转场提示和互动梗，节奏更稳。</p>
+          </article>
+          <article>
+            <span>06</span>
+            <h3>离线使用</h3>
+            <p>本地音频、本地配置、本地播放，适合开黑和日常直播。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="compare" class="compare-section" aria-labelledby="compare-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">Free / Pro</p>
+          <h2 id="compare-title">先免费体验，再按需要升级。</h2>
+        </div>
+        <div class="plan-grid">
+          <article class="plan-card">
+            <h3>Free</h3>
+            <p>适合先做一套轻量语音包。</p>
+            <ul>
+              <li>最多 10 个音效</li>
+              <li>3 个分类歌单</li>
+              <li>3 个快捷键</li>
+              <li>基础 FPS 预设</li>
+            </ul>
+            <a class="secondary-cta" href="../dist/VoxJoy_Free_Setup.exe">免费下载 Windows 版</a>
+          </article>
+          <article class="plan-card featured">
+            <div class="plan-badge">推荐</div>
+            <h3>Pro</h3>
+            <p>适合主播、固定车队和重度音效玩家。</p>
+            <ul>
+              <li>不限音效</li>
+              <li>不限分类</li>
+              <li>不限快捷键</li>
+              <li>完整 FPS 预设</li>
+              <li>后续高级功能优先支持</li>
+            </ul>
+            <a class="primary-cta" href="#download">查看高级版</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="download" class="download-section" aria-labelledby="download-title">
+        <div>
+          <p class="eyebrow">下载 VoxJoy</p>
+          <h2 id="download-title">从第一套语音歌单开始。</h2>
+          <p>支持 Windows 10 / 11，免费版可直接体验，Pro 登录后自动解锁。</p>
+        </div>
+        <div class="download-actions">
+          <a class="primary-cta" href="../dist/VoxJoy_Free_Setup.exe">免费下载 Windows 版</a>
+          <a class="secondary-cta" href="#compare">查看高级版</a>
+        </div>
+      </section>
+
+      <section id="faq" class="faq-section" aria-labelledby="faq-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">安装前，先把关键问题说清楚。</h2>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>VoxJoy 会读取游戏数据吗？</summary>
+            <p>不会。官网 FPS 演示只是模拟玩家使用场景。VoxJoy 第一版以用户手动快捷键触发音效为主，不读取游戏内存、不注入游戏进程、不提供游戏优势信息。</p>
+          </details>
+          <details>
+            <summary>这和 Riot Games 有合作关系吗？</summary>
+            <p>不是。VoxJoy 是独立工具，页面中提到的游戏名称仅用于描述玩家使用场景。</p>
+          </details>
+          <details>
+            <summary>我需要安装虚拟声卡吗？</summary>
+            <p>如果希望语音软件里的队友也听到音效，建议安装虚拟声卡，并把主输出设置到对应输入设备。</p>
+          </details>
+          <details>
+            <summary>支持哪些音频文件？</summary>
+            <p>第一版以常见的 MP3 和 WAV 为主，适合整理击杀、胜利、失败和整活语音。</p>
+          </details>
+          <details>
+            <summary>适合哪些 FPS 玩家场景？</summary>
+            <p>适合 Valorant、CS2 等战术射击玩家做手动快捷键音效触发，也适合开黑和直播间互动。</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <strong>非官方免责声明</strong>
+      <p>VoxJoy 非 Riot Games 官方产品，未获得 Riot Games 背书或合作授权。Valorant、CS2 等游戏名称仅用于描述玩家使用场景。本页面未使用 Riot/Valorant 官方 Logo、角色、地图、技能图标、官方 UI 或官方音频。</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
